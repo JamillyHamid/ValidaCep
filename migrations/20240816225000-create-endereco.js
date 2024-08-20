@@ -1,33 +1,30 @@
 'use strict';
 
-const { QueryInterface, Sequelize } = require("sequelize");
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('enderecos', {
-      Id: {
-        type: Sequelize.INTERGER,
+    await queryInterface.createTable('endereços', {
+      Id:{
+        type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false,
       },
       Cep: {
         type: Sequelize.STRING,
-        alowNull: false,
+        allowNull: false,
       },
-      Logadouro: {
+      Logradouro: {
         type: Sequelize.STRING,
         allowNull: false,
       },
       Numero: {
-        type: Sequelize.INTERGER,
+        type: Sequelize.INTEGER,
         allowNull: false,
       },
       Complemento: {
         type: Sequelize.STRING,
-        allowNull: false,
       },
-      Bairros: {
+      Bairro: {
         type: Sequelize.STRING,
         allowNull: false,
       },
@@ -43,6 +40,7 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+        
     });
   },
 
