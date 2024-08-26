@@ -1,4 +1,4 @@
-const { Sequelize } = require('./Model/endereco');
+const { Sequelize } = require('../models/endereco');
 const{ Model, DataTypes} = require ('sequelize');
 const sequelize = require('../config/database');
 
